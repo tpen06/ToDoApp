@@ -162,7 +162,7 @@ const App = () => {
         <div className="task-actions">
 
         <button className="edit-btn me-2" onClick={() => startEditing(task)}>
-          <img src="..\src\assets\Image\pencil-fill.svg"/>
+          <img src="..\src\assets\Image\pencil-fill.svg" alt="My Image"/>
         </button>
         <button className="trash-btn" onClick={() => deleteTask(task.id)}>
           <img src="..\src\assets\Image\trash3.svg"/>
