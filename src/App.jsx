@@ -91,7 +91,7 @@ const App = () => {
         </div>
 
         <div className="position-relative">
-        <label className="form-label mb-0">Start Date:</label>
+        <label className="form-label mb-0">Start Dates:</label>
         <div className="position-relative">
           <input id="startDate" type="date" className="form-control pe-5" value={newTaskStartDate} onChange={(e) => setNewTaskStartDate(e.target.value)}/>
           <img src="..\src\assets\Image\calendar-fill.svg" className="calendar-icon position-absolute end-0 me-2" alt="Calendar" onClick={() => document.getElementById("startDate").showPicker()}/>
@@ -101,7 +101,7 @@ const App = () => {
         <div className="position-relative">
           <label className="form-label mb-0">End Date:</label>
           <input id="endDate" input type="date" className="form-control pe-5" value={newTaskEndDate} onChange={(e) => setNewTaskEndDate(e.target.value)}/>
-          <img src="public/Images/calendar-fill.svg" className="calendar-icon position-absolute end-0 me-2" alt="Calendar" onClick={() => document.getElementById("endDate").showPicker()}/>
+          <img src="/public/Images/calendar-fill.svg" className="calendar-icon position-absolute end-0 me-2" alt="Calendar" onClick={() => document.getElementById("endDate").showPicker()}/>
         </div>
 
         <div className="position-relative">
