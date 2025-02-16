@@ -83,7 +83,7 @@ const App = () => {
       </nav>
 
         <div className="content flex-grow-1 p-4">
-      <h1 className="text">To-Do List</h1>
+      <h1 className="text">To-Do Lista</h1>
       <div className="task-input mb-4 d-flex gap-2 align-items-center">
         <div className="position-relative">
           <label className="form-label mb-0">Task Name:</label>
