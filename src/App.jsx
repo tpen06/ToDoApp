@@ -79,7 +79,7 @@ const App = () => {
   return (
     <div className="app-container">
       <nav className="navbar">
-      <img src="..\src\assets\Image\Lex.png" alt="Logo" style={{ width: "150px", marginRight: "10px" }} />
+      <img src="/Lex.png" alt="Logo" style={{ width: "150px", marginRight: "10px" }} />
       </nav>
 
         <div className="content flex-grow-1 p-4">
@@ -101,7 +101,7 @@ const App = () => {
         <div className="position-relative">
           <label className="form-label mb-0">End Date:</label>
           <input id="endDate" input type="date" className="form-control pe-5" value={newTaskEndDate} onChange={(e) => setNewTaskEndDate(e.target.value)}/>
-          <img src="..\src\assets\Image\calendar-fill.svg" className="calendar-icon position-absolute end-0 me-2" alt="Calendar" onClick={() => document.getElementById("endDate").showPicker()}/>
+          <img src="/calendar-fill.svg" className="calendar-icon position-absolute end-0 me-2" alt="Calendar" onClick={() => document.getElementById("endDate").showPicker()}/>
         </div>
 
         <div className="position-relative">
@@ -162,10 +162,10 @@ const App = () => {
         <div className="task-actions">
 
         <button className="edit-btn me-2" onClick={() => startEditing(task)}>
-          <img src="..\src\assets\Image\pencil-fill.svg"/>
+          <img src="/pencil-fill.svg"/>
         </button>
         <button className="trash-btn" onClick={() => deleteTask(task.id)}>
-          <img src="..\src\assets\Image\trash3.svg"/>
+          <img src="/trash3.svg"/>
         </button>
         </div>
       </>
