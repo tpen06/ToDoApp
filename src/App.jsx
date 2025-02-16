@@ -14,6 +14,7 @@ const App = () => {
   const [editedEndDate, setEditedEndDate] = useState("");
   const [editedPriority, setEditedPriority] = useState("");
   const [filterPriority, setFilterPriority] = useState("All");
+  const [filterDate, setFilterDate] = useState("Default");
 
   const addTask = () => {
     if (newTask.trim() !== "" && newTaskStartDate !== "" && newTaskEndDate !== "") {
@@ -64,16 +65,22 @@ const App = () => {
     setEditingTaskId(null);
   };
 
-  const filteredTasks = filterPriority === "All" ? tasks : tasks.filter(task => task.priority === filterPriority);
+  const filteredTasks = tasks
+    .filter(task => filterPriority === "All" || task.priority === filterPriority)
+    .sort((a, b) => {
+      if (filterDate === "StartDate") {
+        return new Date(a.startDate) - new Date(b.startDate);
+      } else if (filterDate === "EndDate") {
+        return new Date(a.endDate) - new Date(b.endDate);
+      }
+      return 0;
+    });
 
   return (
-    
     <div className="app-container">
       <nav className="navbar">
       <img src="..\src\assets\Image\Lex.png" alt="Logo" style={{ width: "150px", marginRight: "10px" }} />
       </nav>
-      <div className="sidebar">
-      </div>
 
         <div className="content flex-grow-1 p-4">
       <h1 className="text">To-Do List</h1>
@@ -106,18 +113,30 @@ const App = () => {
           </select>
         </div>
 
-        <button className="btn btn-warning" onClick={addTask}>Add</button>
+        <button className="btn add" onClick={addTask}>Add</button>
       </div>
 
 
-        <div className="filter">
-          <label>Filter by Priority: </label>
-          <select className="form-select w-auto d-inline-block ms-2" value={filterPriority} onChange={(e) => setFilterPriority(e.target.value)}>
-            <option value="All">All</option>
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
-          </select>
+        {/* Filters Section */}
+        <div className="filter d-flex gap-3 align-items-center">
+          <div>
+            <label>Filter by Priority: </label>
+            <select className="form-select w-auto d-inline-block ms-2" value={filterPriority} onChange={(e) => setFilterPriority(e.target.value)}>
+              <option value="All">All</option>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Sort by Date: </label>
+            <select className="form-select w-auto d-inline-block ms-2" value={filterDate} onChange={(e) => setFilterDate(e.target.value)}>
+              <option value="Default">Default</option>
+              <option value="StartDate">Start Date</option>
+              <option value="EndDate">End Date</option>
+            </select>
+          </div>
         </div>
 
         <ul className="task-list list-group">{filteredTasks.map(task => (
@@ -160,3 +179,4 @@ const App = () => {
 };
 
 export default App;
+

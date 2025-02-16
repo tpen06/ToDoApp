@@ -1,11 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f3e5f5;
-
+  background: linear-gradient(to right, #F4512C, #6a0dad);
+  min-height: 100vh;
 }
 
 .app-container {
   display: flex;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -23,28 +24,20 @@ body {
   align-items: center;
 }
 
-.sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 150px; 
-  height: 100vh; 
-  background: linear-gradient(to right, #ff7e5f, #6a0dad);
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
 .content {
-  margin-top: 60px; 
-  margin-left: 150px; 
+  margin-top: 100px; 
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 100px;
   min-height: 100vh;
   flex-grow: 1;
   background-color: #F8FFFE; 
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 100px 100px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 h1 {
-  color: #f4512c; 
+  color: #5E1B89; 
   font-family: 'Roboto Slab', serif;
   font-weight: bold;
   text-align: center;
@@ -74,9 +67,9 @@ h1 {
   margin-bottom: 20px;
   padding: 15px;
   font-family: 'Lato', serif;
-  background-color: #ff7e5f;
+  background-color: #F8FFFE;
   border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 .task-list {
@@ -101,7 +94,7 @@ h1 {
 
 .task-text { 
   font-weight: 500; 
-  font-size: 16px; 
+  font-size: 20px; 
   color: #333; 
 }
 .date-range { 
@@ -123,49 +116,20 @@ h1 {
 .filter{
   font-family: 'Lato', serif;
   margin-bottom: auto;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #ff7e5f;
 }
 
 
-.btn-warning {
-  background-color: #5E1B89; 
+.add {
+  background-color: #FF7F4D; 
   color: white;
 }
 
-.btn-warning:hover {
-  background-color: #9D71BC; 
+.add:hover {
+  background-color: #F4512C; 
   color: white;
 }
-
-.btn-primary {
-  background-color: #5E1B89; 
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #9D71BC; 
-}
-
-.btn-danger {
-  background-color: #d32f2f; 
-  border: none;
-}
-
-.btn-danger:hover {
-  background-color: #b71c1c;
-}
-
-.border-start {
-  padding-left: 10px;
-}
-
-.border-danger {
-  border-color: #d32f2f !important;
-}
-
-.btn-danger img {
-  filter: invert(1);
-}
-
 
 .border-warning {
   border-color: #ff9800 !important;
