@@ -79,7 +79,7 @@ const App = () => {
   return (
     <div className="app-container">
       <nav className="navbar">
-      <img src="/Lex.png" alt="Logo" style={{ width: "150px", marginRight: "10px" }} />
+      <img src="/lex.png" alt="Logo" style={{ width: "150px", marginRight: "10px" }} />
       </nav>
 
         <div className="content flex-grow-1 p-4">
