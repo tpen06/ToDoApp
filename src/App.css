@@ -131,6 +131,30 @@ h1 {
   color: white;
 }
 
+.btn-danger {
+  font-family: 'Lato', serif;
+  background-color: #dc3545; 
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333; 
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.completed-counter {
+  font-family: 'Lato', serif;
+  font-size: 1.1rem;
+  font-weight: bold; 
+  margin-bottom: 1rem; 
+}
+
 .border-warning {
   border-color: #ff9800 !important;
 }
